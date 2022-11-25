@@ -11,7 +11,7 @@ permissions:
 jobs:
   dispatch_scheduled_releases:
     name: Dispatch scheduled releases
-    if: ${{ github.repository == 'spring-projects/spring-security' }}
+    if: ${{ github.repository == 'kirklin/spring-security' }}
     strategy:
       matrix:
         #
