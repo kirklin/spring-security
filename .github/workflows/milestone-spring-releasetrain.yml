@@ -8,10 +8,10 @@ env:
 permissions:
   contents: read
 jobs:
-  spring-releasetrain-checks:    
+  spring-releasetrain-checks:
     name: Check DueOn is on a Release Date
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'spring-projects/spring-security' }}
+    if: ${{ github.repository == 'kirklin/spring-security' }}
     permissions:
       contents: none
     steps:
