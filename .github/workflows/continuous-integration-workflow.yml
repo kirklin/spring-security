@@ -36,10 +36,10 @@ jobs:
         name: Determine if should continue
         run: |
           # Run jobs if in upstream repository
-          echo "::set-output name=runjobs::true"
+          echo "runjobs=true" >>$GITHUB_OUTPUT
           # Extract version from gradle.properties
           version=$(cat gradle.properties | grep "version=" | awk -F'=' '{print $2}')
-          echo "::set-output name=project_version::$version"
+          echo "project_version=$version" >>$GITHUB_OUTPUT
   build_jdk_17:
     name: Build JDK 17
     needs: [prerequisites]
